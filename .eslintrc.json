@@ -1,13 +1,17 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb"],
   "rules": {
     "no-console": "off",
     "comma-dangle": "off",
     "quotes": "off",
     "react/prop-types": 0,
+    "react/destructuring-assignment": "off",
     "arrow-body-style": 0,
     "space-before-function-paren": 0,
-    "array-bracket-spacing": "off"
+    "array-bracket-spacing": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   },
   "env": {
     "browser": true

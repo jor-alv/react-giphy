@@ -5,6 +5,8 @@ import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
 
+const testKey = 'cEVyj60slbrQ6REDp2XqhoznBEyvXZeY';
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -33,22 +35,20 @@ export default class App extends Component {
   }
 
   search = (query) => {
-    giphy('cEVyj60slbrQ6REDp2XqhoznBEyvXZeY').search({
+    giphy(testKey).search({
       q: query,
       rating: 'g',
       limit: 40
     }, (error, result) => {
-      console.log(result.data);
       this.setState({
         gifs: result.data
       });
     });
   }
 
-  displayGif = (event) => {
-    console.log(event.target.src.split('/')[4]);
+  selectGif = (id) => {
     this.setState({
-      selectedGifId: event.target.src.split('/')[4]
+      selectedGifId: id
     });
   }
 
@@ -62,7 +62,7 @@ export default class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-            <GifList gifs={this.state.gifs} selectGif={this.displayGif}/>
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );

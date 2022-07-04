@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Gif from './gif';
+import Gif from '../components/gif';
 
 export default class GifList extends Component {
-  renderList = () => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} handleClick={this.props.selectGif} />);
+  renderList = ({ gifs, selectGif }) => {
+    return gifs.map(({ id }) => <Gif id={id} key={id} handleClick={selectGif} />);
   }
 
   render() {

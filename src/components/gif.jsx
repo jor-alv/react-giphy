@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class Gif extends Component {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.id !== this.props.id;
+  }
+
   handleClick = () => {
     if (this.props.selectGif) {
       console.log(this.props.id);

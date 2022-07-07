@@ -6,4 +6,4 @@ react-giphy is a simple app I built as an exercise while learning React. It allo
 
 I deployed it to Github pages, in case you want to check it out: https://jor-alv.github.io/react-giphy/ :basecampy:
 
-![screenshot](https://github.com/jor-alv/react-giphy/tree/master/assets/screenshot-react-giphy.png?raw=true)
+![screenshot](https://github.com/jor-alv/react-giphy/blob/master/assets/screenshot-react-giphy.png?raw=true)
